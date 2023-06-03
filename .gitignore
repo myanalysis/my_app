@@ -335,6 +335,6 @@ project.min.css
 vendors.js
 *.min.js
 *.min.js.map
-.env
-.envs/*
-!.envs/.local/
+#.env
+#.envs/*
+#!.envs/.local/

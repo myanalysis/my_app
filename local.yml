@@ -34,22 +34,6 @@ services:
     env_file:
       - ./.envs/.local/.postgres
 
-  docs:
-    image: my_app_local_docs
-    container_name: my_app_local_docs
-    build:
-      context: .
-      dockerfile: ./compose/local/docs/Dockerfile
-    env_file:
-      - ./.envs/.local/.django
-    volumes:
-      - ./docs:/docs:z
-      - ./config:/app/config:z
-      - ./my_app:/app/my_app:z
-    ports:
-      - '9000:9000'
-    command: /start-docs
-
   node:
     build:
       context: .

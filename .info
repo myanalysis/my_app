@@ -1,0 +1,19 @@
+
+
+docker-compose -f local.yml build
+docker-compose -f production.yml build
+
+
+docker tag local-image:tagname new-repo:tagname
+docker push new-repo:tagname
+
+docker images
+
+docker tag local-image:latest my_app:latest
+docker push myanalysis/my_app:latest
+
+
+docker pull myanalysis/my_app:latest
+
+sudo docker login -u myanalysis
+tuzja4-nurfuN-padzud
