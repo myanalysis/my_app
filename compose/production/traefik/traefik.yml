@@ -28,7 +28,7 @@ certificatesResolvers:
 http:
   routers:
     web-secure-router:
-      rule: 'Host(`myprelim.finance`) || Host(`https://myprelim.finance`)'
+      rule: 'Host(`myprelim.finance`) || Host(`206.189.87.213`)'
       entryPoints:
         - web-secure
       middlewares:
@@ -39,7 +39,7 @@ http:
         certResolver: letsencrypt
 
     web-media-router:
-      rule: '(Host(`myprelim.finance`) || Host(`https://myprelim.finance`)) && PathPrefix(`/media/`)'
+      rule: '(Host(`myprelim.finance`) || Host(`206.189.87.213`)) && PathPrefix(`/media/`)'
       entryPoints:
         - web-secure
       middlewares:
